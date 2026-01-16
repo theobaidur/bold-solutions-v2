@@ -1,6 +1,6 @@
 import { FaArrowRight } from 'react-icons/fa';
-
-import { FaLaptopCode, FaCloud, FaBrain, FaBriefcase, FaShieldAlt, FaUserPlus, FaCheck, FaBolt, FaLock, FaChartLine, FaRocket, FaQuoteLeft, FaChevronDown, FaEnvelope, FaCalendarCheck } from 'react-icons/fa';
+import { FaLaptopCode, FaCloud, FaBrain, FaBriefcase, FaShieldAlt, FaBolt, FaLock, FaChartLine, FaRocket, FaQuoteLeft, FaChevronDown, FaEnvelope, FaCalendarCheck } from 'react-icons/fa';
+import ServiceCard from '../components/ServiceCard';
 
 const Home = () => {
   return (
@@ -13,10 +13,10 @@ const Home = () => {
             INNOVATE • TRANSFORM • GROW
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-6 leading-tight max-w-4xl mx-auto dark:text-white">
-            Bold Solutions for the <span className="block text-primary transparent-text-stroke">Digital Future</span>
+            Empowering Your <span className="block text-primary transparent-text-stroke">Digital Future</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed dark:text-slate-300">
-            Empowering businesses with innovative technology solutions that drive growth and transformation.
+            From AI-driven solutions and cloud migration to enterprise systems and application development—we deliver comprehensive technology services that transform businesses and drive sustainable growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="#contact" className="px-8 py-4 bg-primary text-white rounded-full font-semibold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1 w-full sm:w-auto text-center">
@@ -81,134 +81,116 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-slate-50 dark:bg-slate-800/50">
+      <section id="services" className="py-20 bg-gradient-to-br from-primary/5 via-blue-50 to-purple-50 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-primary font-bold tracking-wider text-sm uppercase mb-2 block">SERVICES</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 dark:text-white">Our Solutions</h2>
-            <p className="text-slate-600 text-lg dark:text-slate-300">We offer a comprehensive suite of technology solutions designed to transform your business operations and drive growth.</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 dark:text-white">Our Services</h2>
+            <p className="text-slate-600 text-lg dark:text-slate-300">Comprehensive technology solutions that drive measurable business outcomes and support your entire digital journey</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Service 1 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group dark:bg-slate-800 dark:border-slate-700">
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary text-2xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                <FaLaptopCode />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 dark:text-white">Application Development</h3>
-              <p className="text-slate-600 mb-4 leading-relaxed dark:text-slate-400">End-to-end web and mobile application development tailored to your business needs and market demands.</p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> Custom web frontend & backend
-                </li>
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> Native & cross-platform mobile apps
-                </li>
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> PWAs & responsive design
-                </li>
-              </ul>
-            </div>
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <ServiceCard
+              variant="featured"
+              icon={FaBrain}
+              title="AI-Driven Solutions"
+              description="Harness the power of artificial intelligence to automate processes, extract insights, and create intelligent applications that give you a competitive edge."
+              features={[
+                'Custom AI/ML model development',
+                'Natural Language Processing & ChatGPT integration',
+                'Computer Vision & predictive analytics',
+                'Intelligent automation & decision systems'
+              ]}
+              ctaText="Learn More"
+              gradientFrom="primary"
+              gradientTo="purple-600"
+              accentColor="primary/20"
+            />
 
-            {/* Service 2 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group dark:bg-slate-800 dark:border-slate-700">
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary text-2xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                <FaCloud />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 dark:text-white">Cloud & DevOps</h3>
-              <p className="text-slate-600 mb-4 leading-relaxed dark:text-slate-400">Modern cloud infrastructure and deployment solutions to optimize performance, costs, and operational efficiency.</p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> Cloud migration (AWS, Azure, GCP)
-                </li>
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> CI/CD pipeline automation
-                </li>
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> Containerization & orchestration
-                </li>
-              </ul>
-            </div>
+            <ServiceCard
+              variant="featured"
+              icon={FaRocket}
+              title="Digital Transformation"
+              description="Strategic consulting to modernize your business operations, processes, and technology stack for the digital age."
+              features={[
+                'Digital strategy & roadmap development',
+                'Legacy system modernization',
+                'Business process automation & optimization',
+                'Digital culture & change management'
+              ]}
+              ctaText="Get Started"
+              gradientFrom="blue-600"
+              gradientTo="cyan-600"
+              accentColor="blue-500/20"
+            />
 
-            {/* Service 3 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group dark:bg-slate-800 dark:border-slate-700">
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary text-2xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                <FaBrain />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 dark:text-white">AI & Data Solutions</h3>
-              <p className="text-slate-600 mb-4 leading-relaxed dark:text-slate-400">Advanced data analytics and artificial intelligence services to extract insights and automate business processes.</p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> Machine learning development
-                </li>
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> NLP & Computer Vision
-                </li>
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> Big data analytics & dashboards
-                </li>
-              </ul>
-            </div>
+            <ServiceCard
+              variant="featured"
+              icon={FaCloud}
+              title="Cloud Migration"
+              description="Expert guidance for seamless migration to AWS, Azure, or Google Cloud with minimal downtime and maximum efficiency."
+              features={[
+                'Cloud readiness assessment & strategy',
+                'Multi-cloud & hybrid cloud architecture',
+                'Cost optimization & performance tuning',
+                'Security & compliance implementation'
+              ]}
+              ctaText="Start Migration"
+              gradientFrom="cyan-600"
+              gradientTo="blue-600"
+              accentColor="cyan-500/20"
+            />
 
-            {/* Service 4 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group dark:bg-slate-800 dark:border-slate-700">
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary text-2xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                <FaBriefcase />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 dark:text-white">Enterprise Systems</h3>
-              <p className="text-slate-600 mb-4 leading-relaxed dark:text-slate-400">Integrated business systems to streamline operations and enhance productivity across your organization.</p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> ERP implementations & custom
-                </li>
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> CRM solutions (Dynamics 365)
-                </li>
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> Business process automation
-                </li>
-              </ul>
-            </div>
+            <ServiceCard
+              variant="featured"
+              icon={FaLaptopCode}
+              title="Application Development"
+              description="End-to-end web and mobile application development tailored to your business needs and market demands."
+              features={[
+                'Custom web frontend & backend',
+                'Native & cross-platform mobile apps',
+                'PWAs & responsive design',
+                'API development & integration'
+              ]}
+              ctaText="Build Your App"
+              gradientFrom="emerald-600"
+              gradientTo="teal-600"
+              accentColor="emerald-500/20"
+            />
 
-            {/* Service 5 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group dark:bg-slate-800 dark:border-slate-700">
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary text-2xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                <FaShieldAlt />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 dark:text-white">Security & QA</h3>
-              <p className="text-slate-600 mb-4 leading-relaxed dark:text-slate-400">Comprehensive security and testing services to ensure your software is reliable, secure, and compliant.</p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> Security assessments & audits
-                </li>
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> Compliance (ISO, GDPR, SOC2)
-                </li>
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> Manual & automated testing
-                </li>
-              </ul>
-            </div>
+            <ServiceCard
+              variant="featured"
+              icon={FaBriefcase}
+              title="Enterprise Systems"
+              description="Integrated business systems to streamline operations and enhance productivity across your organization."
+              features={[
+                'ERP implementations & customization',
+                'CRM solutions (Dynamics 365)',
+                'Business process automation',
+                'System integration & migration'
+              ]}
+              ctaText="Transform Operations"
+              gradientFrom="orange-600"
+              gradientTo="amber-600"
+              accentColor="orange-500/20"
+            />
 
-            {/* Service 6 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group dark:bg-slate-800 dark:border-slate-700">
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary text-2xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                <FaUserPlus />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 dark:text-white">Resource Augmentation</h3>
-              <p className="text-slate-600 mb-4 leading-relaxed dark:text-slate-400">Flexible staffing solutions and reliable technical support to enhance your team and infrastructure.</p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> Dedicated developers & designers
-                </li>
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> 24/7 technical support
-                </li>
-                <li className="flex items-start text-sm text-slate-500 dark:text-slate-400">
-                  <FaCheck className="text-primary mt-1 mr-2" /> Scaling resources on demand
-                </li>
-              </ul>
-            </div>
+            <ServiceCard
+              variant="featured"
+              icon={FaShieldAlt}
+              title="Security & QA"
+              description="Comprehensive security and testing services to ensure your software is reliable, secure, and compliant."
+              features={[
+                'Security assessments & audits',
+                'Compliance (ISO, GDPR, SOC2)',
+                'Manual & automated testing',
+                'Penetration testing & monitoring'
+              ]}
+              ctaText="Secure Your Systems"
+              gradientFrom="red-600"
+              gradientTo="pink-600"
+              accentColor="red-500/20"
+            />
           </div>
 
           <div className="text-center mt-12">
